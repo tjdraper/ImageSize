@@ -3,12 +3,12 @@ class Plugin_imagesize extends Plugin
 {
 	var $meta = array(
 		'name' => 'Image Size',
-		'version' => '1.0.0',
+		'version' => '1.0.1',
 		'author' => 'TJ Draper',
 		'author_url' => 'http://buzzingpixel.com'
 	);
 
-	public function get()
+	public function index()
 	{
 		// Params
 		$path = $this->fetchParam('path');

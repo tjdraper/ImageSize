@@ -4,7 +4,7 @@ A plugin to get either the width or height of an image.
 
 ## Useage:
 
-	{{ imagesize:get path="{hero_image}" type="width" divide="2" }}
+	{{ imagesize path="{hero_image}" type="width" divide="2" }}
 
 As in the example above, the tag is "imagesize:get" and takes the following parameters:
 
