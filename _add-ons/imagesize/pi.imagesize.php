@@ -3,7 +3,7 @@ class Plugin_imagesize extends Plugin
 {
 	var $meta = array(
 		'name' => 'Image Size',
-		'version' => '1.0.1',
+		'version' => '1.0.2',
 		'author' => 'TJ Draper',
 		'author_url' => 'http://buzzingpixel.com'
 	);
@@ -14,6 +14,12 @@ class Plugin_imagesize extends Plugin
 		$path = $this->fetchParam('path');
 		$type = $this->fetchParam('type'); // width or height
 		$divide = (int)$this->fetchParam('divide');
+		$parse_path = $this->fetchParam('parse_path');
+
+		// Find out if we need to parse a plugin in the path parameter
+		if ($parse_path == 'yes') {
+			$path = Parse::template('{' . $path . '}', array());
+		}
 
 		// Make sure path and type params have been set
 		if ($path != '' AND $type != '') {

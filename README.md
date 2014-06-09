@@ -1,4 +1,4 @@
-# ImageSize for Statamic
+# ImageSize 1.0.2 for Statamic
 
 A plugin to get either the width or height of an image.
 
@@ -18,7 +18,15 @@ Tell ImageSize if you want the width or the height of the image.
 
 ### divide="2"
 
-This is actually why I developed this add-on, but I'll get to that in a minute. Supply an number to divide the image size by.
+This is actually why I developed this add-on, but I'll get to that in a minute. Supply a number to divide the image size by.
+
+### parse_path="yes"
+
+This allows you to use a plugin as input in the path parameter. This was added so that you get get a dimension of the native Statamic transform plugin. Sometimes you want to set a height or width only and let the other dimension be dynamic, but you need to know what that final dimension is. It works something like this:
+
+	{{ imagesize path="{transform src='/nature.jpg' width='100' quality='100'}" parse_path="yes" type="height" }}
+
+Note that the transform tag is in single curly brackets. Because of the way Statamic parses things, it won't work in double curly brackets.
 
 ## Why Is This Needed?!?
 
