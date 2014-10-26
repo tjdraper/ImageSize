@@ -11,7 +11,7 @@ class Plugin_imagesize extends Plugin
 	public function index()
 	{
 		// Params
-		$path = $this->fetchParam('path');
+		$path = $this->fetchParam('path', null, null, false, false); // 5th parameter to prevent force lowercase
 		$type = $this->fetchParam('type'); // width or height
 		$divide = (int)$this->fetchParam('divide');
 		$parse_path = $this->fetchParam('parse_path');
