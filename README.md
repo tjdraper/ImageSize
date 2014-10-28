@@ -1,4 +1,4 @@
-# ImageSize 1.0.2 for Statamic
+# ImageSize 1.0.3 for Statamic
 
 A plugin to get either the width or height of an image.
 

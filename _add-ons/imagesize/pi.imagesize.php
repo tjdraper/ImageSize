@@ -3,7 +3,7 @@ class Plugin_imagesize extends Plugin
 {
 	var $meta = array(
 		'name' => 'Image Size',
-		'version' => '1.0.2',
+		'version' => '1.0.3',
 		'author' => 'TJ Draper',
 		'author_url' => 'http://buzzingpixel.com'
 	);
@@ -11,7 +11,8 @@ class Plugin_imagesize extends Plugin
 	public function index()
 	{
 		// Params
-		$path = $this->fetchParam('path', null, null, false, false); // 5th parameter to prevent force lowercase
+		// 5th parameter on path prevents forcing filename to lowercase
+		$path = $this->fetchParam('path', null, null, false, false);
 		$type = $this->fetchParam('type'); // width or height
 		$divide = (int)$this->fetchParam('divide');
 		$parse_path = $this->fetchParam('parse_path');
